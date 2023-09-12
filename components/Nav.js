@@ -31,8 +31,8 @@ export const navData = [
 const Nav = () => {
   const router = useRouter();
   const pathName = router.pathname;
-  return <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen'>
-    <div className='flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-80 bg-white/10 xl:h-max py-8 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
+  return (<nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen'>
+    <div className='flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] bg-white/10 xl:h-max py-8 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
       {navData.map((menu, index) => (
         <Link className={`${menu.path === pathName && 'text-accent'} relative flex items-center group hover:text-accent transition-all duration-300`} key={index} href={menu.path}>
           <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
@@ -46,7 +46,7 @@ const Nav = () => {
         </Link>
       ))}
     </div>
-  </nav>;
+  </nav>);
 };
 
 export default Nav;
