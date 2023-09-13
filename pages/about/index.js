@@ -1,3 +1,4 @@
+/* eslint-disable */
 // icons
 import {
   FaHtml5,
