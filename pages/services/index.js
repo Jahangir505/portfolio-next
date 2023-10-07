@@ -1,4 +1,5 @@
 // icons
+/* eslint-disable */
 import {
   RxCrop,
   RxPencil2,
